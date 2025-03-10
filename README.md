@@ -5,4 +5,5 @@ Detta projekt innehåller en ER-modell och en SQL-kod för att skapa och hantera
 Inehållet:
 
 ER-Diagram i png format
+
 SQL-Script 
