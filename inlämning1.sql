@@ -1,17 +1,17 @@
-CREATE DATABASE pj_bokhandel; 
+CREATE DATABASE pj_bokhandel; -- Här kommer skapas databasen vid namnet pj_bokhandel
 
 
-USE pj_bokhandel; 
+USE pj_bokhandel; -- pj_bokhandel här selectar man sin databas, detta behövs skrivas så man är i rätt läge när man ska börja skriva in tabellerna och inserta values.  
 
 -- Nedanför ser man skapandet av en av tabellerna Kunder. Inom parenteserna anger man varje attribut med vilken datatyp som ska användas.
-CREATE TABLE kunder (  -- Kunder är Entitet och nedanför anger man attributer 
+CREATE TABLE kunder (  -- Create Table skapar tabellen Kunder. 
 
 KundID INT AUTO_INCREMENT PRIMARY KEY, -- skapar attributen och anger det som PK och automatisk utdelning av INT, alltså det delar ut en unikt siffra och man slipper göra det manuellt . PK står för primärnyckel och är som ett unikt identifierar för varje rad. 
 
 
 Namn VARCHAR (255) NOT NULL, --  VARCHAR betyder att man kommer anger datatyp (tecken) och 255 är hur många tecken det får bli, NOT NULL betyder att namn måste alltid ha ett värde och får inte vara NOT NULL
 
-E_POST VARCHAR (255) UNIQUE,-- UNIQUE betyder att en kund kan inte använda en existerande E_Post. Det ska vara unika. 
+E_POST VARCHAR (255) UNIQUE,-- UNIQUE betyder att en kund kan inte använda en existerande E_Post. Det ska vara unika.
 
 Telefon VARCHAR (255) NOT NULL, 
 
@@ -50,7 +50,7 @@ FOREIGN KEY (KundID) REFERENCES Kunder(KundID) -- Här anger man En FK och pekar
 
 
 
-CREATE TABLE orderrader ( -- Detta är vårt brygg - tabell som indirekt kopplar ihop beställningar och böcker. Orderrader tabellen är också kopplad till dem.  
+CREATE TABLE orderrader ( -- brygg - tabell som indirekt kopplar ihop beställningar och böcker. Orderrader tabellen är också kopplad till dem.  
 
 OrderradID INT AUTO_INCREMENT PRIMARY KEY,
 
@@ -60,7 +60,7 @@ OrderID INT NOT NULL,
 
 Antal INT NOT NULL,
 
-FOREIGN KEY (ISBN) REFERENCES Böcker(ISBN), -- Här kopplar vi igen som vi gjorde innan fast nu i böcker tabellen 
+FOREIGN KEY (ISBN) REFERENCES Böcker(ISBN), -- FK i Orderrader refererar till Böcker ISBN PK
 
 FOREIGN KEY (OrderID) REFERENCES beställningar(OrderID)
 );
