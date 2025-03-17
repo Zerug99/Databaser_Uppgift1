@@ -1,3 +1,5 @@
+-- Saknar namn och klass
+
 CREATE DATABASE pj_bokhandel; -- Här kommer skapas databasen vid namnet pj_bokhandel
 
 
@@ -8,7 +10,7 @@ CREATE TABLE kunder (  -- Create Table skapar tabellen Kunder.
 
 KundID INT AUTO_INCREMENT PRIMARY KEY, -- skapar attributen och anger det som PK och automatisk utdelning av INT, alltså det delar ut en unikt siffra och man slipper göra det manuellt . PK står för primärnyckel och är som ett unikt identifierar för varje rad. 
 
-
+-- tänk på samman avstånd
 Namn VARCHAR (150) NOT NULL, --  VARCHAR betyder att man kommer anger datatyp (tecken) och 255 är hur många tecken det får bli, NOT NULL betyder att namn måste alltid ha ett värde och får inte vara NOT NULL
 
 E_POST VARCHAR (150) UNIQUE,-- UNIQUE betyder att en kund kan inte använda en existerande E_Post. Det ska vara unika.
@@ -20,16 +22,11 @@ Adress VARCHAR (255) NOT NULL
 
 
 CREATE TABLE böcker ( -- Här skapas en ny tabell och datatypen här är DECIMAL (10,2,) detta anger hur många siffror det får vara totalt 10 och 2 står för hur många decimaler det får vara. (  ); Inom dessa skriver man koden och avlsutar på );
-
-ISBN VARCHAR(15) PRIMARY KEY, 
-
-Titel VARCHAR(255) NOT NULL,
-
-Författare VARCHAR(150) NOT NULL,
-
-Pris DECIMAL(10,2)NOT NULL, 
-
-Lagerstatus INT NOT NULL
+  ISBN VARCHAR(15) PRIMARY KEY, 
+  Titel VARCHAR(255) NOT NULL,
+  Författare VARCHAR(150) NOT NULL,
+  Pris DECIMAL(10,2)NOT NULL, 
+  Lagerstatus INT NOT NULL
 );
 
 
