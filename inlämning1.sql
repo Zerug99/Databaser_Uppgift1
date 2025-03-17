@@ -9,7 +9,7 @@ CREATE TABLE kunder (  -- Create Table skapar tabellen Kunder.
 KundID INT AUTO_INCREMENT PRIMARY KEY, -- skapar attributen och anger det som PK och automatisk utdelning av INT, alltså det delar ut en unikt siffra och man slipper göra det manuellt . PK står för primärnyckel och är som ett unikt identifierar för varje rad. 
 
 
-Namn VARCHAR (150 NOT NULL, --  VARCHAR betyder att man kommer anger datatyp (tecken) och 255 är hur många tecken det får bli, NOT NULL betyder att namn måste alltid ha ett värde och får inte vara NOT NULL
+Namn VARCHAR (150) NOT NULL, --  VARCHAR betyder att man kommer anger datatyp (tecken) och 255 är hur många tecken det får bli, NOT NULL betyder att namn måste alltid ha ett värde och får inte vara NOT NULL
 
 E_POST VARCHAR (150) UNIQUE,-- UNIQUE betyder att en kund kan inte använda en existerande E_Post. Det ska vara unika.
 
