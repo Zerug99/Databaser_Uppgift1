@@ -1,4 +1,5 @@
--- Saknar namn och klass
+-- Patryk Jersak YH24
+
 
 CREATE DATABASE pj_bokhandel; -- Här kommer skapas databasen vid namnet pj_bokhandel
 
